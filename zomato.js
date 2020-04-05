@@ -1,4 +1,7 @@
-const puppeteer = require('puppeteer');
+const puppeteer = require('puppeteer-extra');
+
+const StealthPlugin = require('puppeteer-extra-plugin-stealth')
+puppeteer.use(StealthPlugin())
 
 const BASE_URL = 'https://zomato.com';
 const TAG_URL = (emirate,address,query) => `https://www.zomato.com/${emirate}/${address}-restaurants?q=${query}`;
